@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AlfaTech - Soluções em Hospedagem. O melhor serviço de hospedagem na web para o seu site.">
+  <title>AlfaTech - Soluções em Hospedagem</title>
+  <!-- Folha de estilos -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon com logo do projeto -->
+  <link rel="icon" type="image/png" href="logo-icone.png">
+</head>
+<body>
+
+  <!-- ==========================================
+       1. Topo / Cabeçalho e Navegação
+       ========================================== -->
+  <header class="topo-cabecalho">
+    <div class="container topo-conteudo">
+      <a href="index.html" class="logo-link">
+        <img src="logo-icone.png" alt="Logo AlfaTech" class="logo-icone">
+        <div class="logo-texto">
+          <h1>AlfaTech</h1>
+          <p>Soluções em hospedagem</p>
+        </div>
+      </a>
+
+      <nav class="menu-navegacao" aria-label="Navegação Principal">
+        <ul>
+          <li><a href="#informacoes">INFORMAÇÕES</a></li>
+          <li><a href="#planos">PLANOS</a></li>
+          <li><a href="precos.html">PREÇOS</a></li>
+          <li><a href="#contato">CONTATO</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         2. Banner Principal (Hero)
+         ========================================== -->
+    <section class="secao-banner">
+      <div class="container banner-conteudo">
+        <div class="banner-texto">
+          <span class="tagline">Simples - Fácil de usar - 10x mais rápido!</span>
+          <h2>O melhor serviço de hospedagem na web para o seu site.</h2>
+          <p class="banner-descricao">
+            Obtenha a melhor velocidade para o seu site. Não perca mais clientes por causa de lentidão na sua hospedagem.
+          </p>
+        </div>
+        <div class="banner-imagem">
+          <img src="imagem-banner.png" alt="Servidores modernos de hospedagem em nuvem AlfaTech">
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         3. Primeiro Anúncio (Faixa Escura)
+         ========================================== -->
+    <section class="secao-anuncio anuncio-escuro">
+      <div class="container anuncio-conteudo">
+        <div class="anuncio-texto">
+          <h3>Hospede o seu site por apenas R$29 por mês.</h3>
+          <p>Também temos planos gratuitos. Adquira já o seu.</p>
+        </div>
+        <a href="precos.html" class="btn-cta btn-azul">
+          <img src="icone-foguete.png" alt="Ícone de foguete" class="icone-botao">
+          <span>TABELA DE PREÇOS</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         4. Seção Informações (Por que nos escolher?)
+         ========================================== -->
+    <section id="informacoes" class="secao-informacoes">
+      <div class="container">
+        <h2 class="titulo-secao">
+          Existem diversos serviços de hospedagem de sites. Porque você deve <span class="destaque-azul">nos escolher?</span>
+        </h2>
+
+        <div class="cards-informacoes">
+          <!-- 1º Card -->
+          <article class="card-info">
+            <div class="card-info-icone">
+              <img src="icone-engrenagens.png" alt="Ícone de engrenagens representando facilidade de configuração">
+            </div>
+            <h4>Fácil de configurar</h4>
+            <p>Facilmente configurável em plataformas CMS populares - Wordpress, Joomla...</p>
+          </article>
+
+          <!-- 2º Card -->
+          <article class="card-info">
+            <div class="card-info-icone">
+              <img src="cloud-icone.png" alt="Ícone de nuvem representando servidores online">
+            </div>
+            <h4>Servidores 100% Online</h4>
+            <p>Serviços que operam 100% do tempo para manter o seu site online...</p>
+          </article>
+
+          <!-- 3º Card -->
+          <article class="card-info">
+            <div class="card-info-icone">
+              <img src="icone-suporte.png" alt="Ícone de suporte 24 horas por dia, 7 dias por semana">
+            </div>
+            <h4>Suporte 24/7</h4>
+            <p>Suporte altamente treinado e especializado em soluções de Cloud...</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         5. Seção Tabela Comparativa de Planos
+         ========================================== -->
+    <section id="planos" class="secao-planos">
+      <div class="container">
+        <h2 class="titulo-secao">
+          Pague <span class="destaque-azul">somente</span> pelo que for usar. Sem cobranças adicionais!
+        </h2>
+
+        <div class="container-tabela-planos">
+          <table class="tabela-comparativa">
+            <thead>
+              <tr>
+                <!-- Coluna 1: Pessoal -->
+                <th>
+                  <div class="cabecalho-plano">
+                    <h4>PESSOAL</h4>
+                    <img src="pessoal-icone.png" alt="Ícone do Plano Pessoal" class="icone-plano-home">
+                    <span class="desc-plano">Indicado para uso pessoal</span>
+                  </div>
+                </th>
+                <!-- Coluna 2: Profissional -->
+                <th>
+                  <div class="cabecalho-plano">
+                    <h4>PROFISSIONAL</h4>
+                    <img src="equipe-icone.png" alt="Ícone do Plano Profissional" class="icone-plano-home">
+                    <span class="desc-plano">Indicado para profissionais de T.I</span>
+                  </div>
+                </th>
+                <!-- Coluna 3: Empresarial -->
+                <th>
+                  <div class="cabecalho-plano">
+                    <h4>EMPRESARIAL</h4>
+                    <img src="empresa-icone.png" alt="Ícone do Plano Empresarial" class="icone-plano-home">
+                    <span class="desc-plano">Indicado para empresas</span>
+                  </div>
+                </th>
+                <!-- Coluna 4: Big Techs -->
+                <th>
+                  <div class="cabecalho-plano">
+                    <h4>BIG TECHS</h4>
+                    <img src="big-tech.png" alt="Ícone do Plano Big Techs" class="icone-plano-home">
+                    <span class="desc-plano">Indicado para grandes empresas</span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1 usuário</td>
+                <td>10 usuários</td>
+                <td>25 usuários</td>
+                <td>50 usuários</td>
+              </tr>
+              <tr>
+                <td>1 Domínio Grátis</td>
+                <td>2 Domínios Grátis</td>
+                <td>2 Domínios Grátis</td>
+                <td>3 Domínios Grátis</td>
+              </tr>
+              <tr>
+                <td>200GB SSD espaço</td>
+                <td>500GB SSD espaço</td>
+                <td>1TB SSD espaço</td>
+                <td>2TB SSD espaço</td>
+              </tr>
+              <tr>
+                <td>Ofertas especiais</td>
+                <td>Ofertas especiais</td>
+                <td>Ofertas especiais</td>
+                <td>Ofertas especiais</td>
+              </tr>
+              <tr>
+                <td>Suporte Limitado</td>
+                <td>Suporte Ilimitado</td>
+                <td>Suporte Ilimitado</td>
+                <td>Suporte Ilimitado</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         6. Segundo Anúncio (Faixa Azul)
+         ========================================== -->
+    <section class="secao-anuncio anuncio-azul">
+      <div class="container anuncio-conteudo">
+        <div class="anuncio-texto">
+          <h3>Mais de 20.000 pessoas confiam na AlfaTech! Seja um deles você também!</h3>
+        </div>
+        <a href="precos.html" class="btn-cta btn-escuro">
+          <img src="icone-foguete.png" alt="Ícone de foguete" class="icone-botao">
+          <span>TABELA DE PREÇOS</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       7. Rodapé (Footer)
+       ========================================== -->
+  <footer id="contato" class="rodape-principal">
+    <div class="container">
+      <div class="rodape-logo">
+        <img src="logo-icone.png" alt="Logo AlfaTech" class="rodape-logo-img">
+        <h3>AlfaTech</h3>
+        <p>Soluções em hospedagem</p>
+      </div>
+
+      <div class="rodape-contatos">
+        <p>Telefone & Whatsapp: <a href="tel:21999995555">(21) 99999-5555</a></p>
+        <p>E-mail: <a href="mailto:suporte@alfatech.com">suporte@alfatech.com</a></p>
+        <p>Endereço: Av Ayrton Senna, 3000 - Barra da Tijuca - Rio de Janeiro</p>
+      </div>
+
+      <div class="rodape-copyright">
+        <p>&copy; AlfaTech - Soluções em hospedagem - Todos os direitos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sub-rodape">
+    <div class="container">
+      <p>Desenvolvido por <strong>Cristian Sousa</strong></p>
+    </div>
+  </div>
+
+</body>
+</html>

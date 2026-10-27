@@ -1,0 +1,584 @@
+/* ==========================================================================
+   AlfaTech - Soluções em Hospedagem
+   Folha de Estilos Principal (HTML & CSS Avançado)
+   ========================================================================== */
+
+/* Importação da fonte moderna Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* --- Variáveis Globais de Cores e Tipografia --- */
+:root {
+  --azul-principal: #1e88e5;
+  --azul-hover: #1565c0;
+  --azul-claro: #e3f2fd;
+  --azul-fundo-suave: #f4f9fd;
+  --escuro-faixa: #212529;
+  --escuro-hover: #111417;
+  --texto-principal: #2d3748;
+  --texto-secundario: #64748b;
+  --texto-claro: #ffffff;
+  --borda-suave: #e2e8f0;
+  --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --sombra-card: 0 10px 25px rgba(30, 136, 229, 0.12);
+  --fonte: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --transicao: all 0.3s ease;
+}
+
+/* --- Reset e Estilos Gerais --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fonte);
+  color: var(--texto-principal);
+  background-color: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================================================
+   1. Cabeçalho / Barra de Navegação
+   ========================================================================== */
+.topo-cabecalho {
+  background-color: #ffffff;
+  padding: 16px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.topo-conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-icone {
+  width: 48px;
+  height: auto;
+}
+
+.logo-texto h1 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.1;
+}
+
+.logo-texto p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--azul-principal);
+  letter-spacing: 0.5px;
+}
+
+.menu-navegacao ul {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+}
+
+.menu-navegacao a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: var(--transicao);
+  padding: 6px 0;
+}
+
+.menu-navegacao a:hover {
+  color: var(--azul-principal);
+}
+
+.menu-navegacao a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--azul-principal);
+  transition: var(--transicao);
+}
+
+.menu-navegacao a:hover::after {
+  width: 100%;
+}
+
+/* ==========================================================================
+   2. Seção Banner Principal (Hero)
+   ========================================================================== */
+.secao-banner {
+  background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+  color: var(--texto-claro);
+  padding: 65px 0 75px 0;
+  overflow: hidden;
+}
+
+.banner-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.banner-texto {
+  flex: 1;
+  max-width: 580px;
+}
+
+.tagline {
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #bbdefb;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+.banner-texto h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.22;
+  margin-bottom: 18px;
+}
+
+.banner-descricao {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: #e3f2fd;
+  line-height: 1.7;
+}
+
+.banner-imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-imagem img {
+  max-width: 480px;
+  width: 100%;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15));
+  transition: transform 0.4s ease;
+}
+
+.banner-imagem img:hover {
+  transform: translateY(-6px);
+}
+
+/* ==========================================================================
+   3. Seções de Anúncios (Call to Action)
+   ========================================================================== */
+.secao-anuncio {
+  padding: 34px 0;
+}
+
+.anuncio-escuro {
+  background-color: var(--escuro-faixa);
+  color: var(--texto-claro);
+}
+
+.anuncio-azul {
+  background: linear-gradient(135deg, #1e88e5 0%, #1976d2 100%);
+  color: var(--texto-claro);
+}
+
+.anuncio-conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.anuncio-texto h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.anuncio-texto p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.anuncio-azul .anuncio-texto h3 {
+  font-size: 1.4rem;
+}
+
+/* Botões Modernos */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 26px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  transition: var(--transicao);
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.btn-azul {
+  background-color: var(--azul-principal);
+  color: var(--texto-claro);
+}
+
+.btn-azul:hover {
+  background-color: var(--azul-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(30, 136, 229, 0.35);
+}
+
+.btn-escuro {
+  background-color: var(--escuro-faixa);
+  color: var(--texto-claro);
+}
+
+.btn-escuro:hover {
+  background-color: var(--escuro-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.icone-botao {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* ==========================================================================
+   4. Seção Informações (Diferenciais)
+   ========================================================================== */
+.secao-informacoes {
+  padding: 85px 0;
+  background-color: #ffffff;
+}
+
+.titulo-secao {
+  text-align: center;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #1e293b;
+  max-width: 780px;
+  margin: 0 auto 55px auto;
+  line-height: 1.35;
+}
+
+.titulo-secao .destaque-azul {
+  color: var(--azul-principal);
+}
+
+.cards-informacoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+
+.card-info {
+  background: #ffffff;
+  padding: 34px 26px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid var(--borda-suave);
+  transition: var(--transicao);
+}
+
+.card-info:hover {
+  transform: translateY(-6px);
+  border-color: #bfdbfe;
+  box-shadow: var(--sombra-card);
+}
+
+.card-info-icone {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-info-icone img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: var(--transicao);
+}
+
+.card-info:hover .card-info-icone img {
+  transform: scale(1.08);
+}
+
+.card-info h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.card-info p {
+  font-size: 0.95rem;
+  color: var(--texto-secundario);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   5. Seção Tabela Comparativa de Planos (Home)
+   ========================================================================== */
+.secao-planos {
+  padding: 80px 0 95px 0;
+  background-color: var(--azul-fundo-suave);
+}
+
+.container-tabela-planos {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(30, 136, 229, 0.15);
+  overflow: hidden;
+  border: 1px solid #dbeafe;
+}
+
+.tabela-comparativa {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.tabela-comparativa th,
+.tabela-comparativa td {
+  padding: 16px 14px;
+  font-size: 0.92rem;
+  border-bottom: 1px solid #f1f5f9;
+  border-right: 1px solid #f1f5f9;
+}
+
+.tabela-comparativa th:last-child,
+.tabela-comparativa td:last-child {
+  border-right: none;
+}
+
+.tabela-comparativa thead th {
+  padding: 30px 16px 22px 16px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.cabecalho-plano {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cabecalho-plano h4 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+
+.icone-plano-home {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin-bottom: 14px;
+  transition: var(--transicao);
+}
+
+.tabela-comparativa thead th:hover .icone-plano-home {
+  transform: scale(1.08);
+}
+
+.desc-plano {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--texto-secundario);
+  display: block;
+  min-height: 38px;
+}
+
+.tabela-comparativa tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.tabela-comparativa tbody tr:hover {
+  background-color: #f0f7ff;
+}
+
+.tabela-comparativa tbody td {
+  color: #475569;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   6. Rodapé (Footer)
+   ========================================================================== */
+.rodape-principal {
+  background-color: #ffffff;
+  padding: 60px 0 25px 0;
+  text-align: center;
+}
+
+.rodape-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.rodape-logo-img {
+  width: 54px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.rodape-logo h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.rodape-logo p {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--azul-principal);
+}
+
+.rodape-contatos {
+  margin-bottom: 30px;
+}
+
+.rodape-contatos p {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 6px;
+}
+
+.rodape-contatos a {
+  color: #475569;
+  transition: var(--transicao);
+}
+
+.rodape-contatos a:hover {
+  color: var(--azul-principal);
+}
+
+.rodape-copyright {
+  font-size: 0.88rem;
+  color: var(--texto-secundario);
+  padding-top: 20px;
+  border-top: 1px solid var(--borda-suave);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.sub-rodape {
+  background-color: #f8fafc;
+  padding: 16px 0;
+  text-align: center;
+  border-top: 1px solid #edf2f7;
+}
+
+.sub-rodape p {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.sub-rodape strong {
+  color: var(--azul-principal);
+}
+
+/* ==========================================================================
+   7. Responsividade (Media Queries)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .banner-conteudo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner-texto {
+    max-width: 100%;
+  }
+
+  .banner-imagem img {
+    max-width: 380px;
+  }
+
+  .cards-informacoes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .topo-conteudo {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .menu-navegacao ul {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .banner-texto h2 {
+    font-size: 2rem;
+  }
+
+  .anuncio-conteudo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cards-informacoes {
+    grid-template-columns: 1fr;
+  }
+
+  /* Responsividade da tabela de planos na home */
+  .container-tabela-planos {
+    overflow-x: auto;
+  }
+
+  .tabela-comparativa {
+    min-width: 600px;
+  }
+}
